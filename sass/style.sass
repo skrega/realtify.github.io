@@ -1,0 +1,785 @@
+@import global
+@import vars
+
+//login start
+.enter
+    display: flex
+    &-inner
+        width: 448px
+        background-color: #fff
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 0 50px
+    &-img
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        margin: 0 auto
+        img
+            width: 100%
+    &-bottom
+        margin-top: 30px
+    &-bottom-box
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-title
+        text-align: center
+        width: 183px
+        margin: 0 5px
+    &-links
+        justify-content: space-between
+        margin-top: 30px
+    &-link
+        padding-left: 20px
+        padding-right: 20px
+        width: 150px
+        &:first-child
+            margin-right: 20px
+.login-inner
+    padding: 110px 50px 0
+.login-img
+    max-width: 647px
+
+.line
+    height: 1px
+    background-color: #030229
+    width: 79px
+    opacity: 0.1
+    display: inline-block
+.logo
+    text-align: center
+
+.form
+    &-title
+        margin: 40px 0 32px
+        text-align: center
+        color: #000
+        font-weight: 600
+        font-size: 25px
+        line-height: 34px
+    &-label
+        margin-bottom: 8px
+        padding-left: 4px
+        font-size: 16px
+        line-height: 22px
+    &-input
+        background-color: #F7F7F8
+        border-radius: 10px
+        padding: 16px 15px 15px
+        width: 100%
+        font-size: 14px
+        line-height: 19px
+        transition: box-shadow .3s
+        &::placeholder
+            font-size: 14px
+            line-height: 19px
+            opacity: 0.7
+        &:focus,
+        &:hover
+            box-shadow: 0px 0px 5px rgba($primaryColor, 0.7)
+
+    &-nav
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 30px
+    &-btn
+        width: 100%
+
+.input-box:not(:last-child)
+    margin-bottom: 20px
+.input:not(:last-child)
+    margin-right: 30px
+.checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.label-checkbox
+    display: inline-flex
+    align-items: center
+    user-select: none
+    cursor: pointer
+    &::before
+        content: ''
+        display: inline-block
+        width: 20px
+        height: 20px
+        flex-shrink: 0
+        flex-grow: 0
+        margin-right: 13px
+        border: 1px solid #030229
+        border-radius: 2px
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+.checkbox:not(:disabled):not(:checked)+ .label-checkbox:hover::before
+    border-color: $primaryColor
+.checkbox:not(:disabled):active+ .label-checkbox::before
+    background-color: $primaryColor
+    border-color: $primaryColor
+.checkbox:checked + .label-checkbox::before
+    border-color: $primaryColor
+    background-color: $primaryColor
+    background-image: url("../images/check.svg")
+
+.sigin-label::before
+    width: 13px
+    height: 13px
+    margin-right: 10px
+
+.popup-recover
+    max-width: 658px
+    width: 100%
+    height: 658px
+    padding: 104px 78px 0
+.success-img
+    text-align: center
+//login end
+//rigister start
+.register
+    &-inner
+        padding-top: 93px
+    &-img
+        max-width: 693px
+    &-bottom
+        text-align: center
+        margin-bottom: 40px
+#consent + .sigin-label
+    padding-left: 25px
+    position: relative
+    margin-bottom: 25px
+    &::before
+        position: absolute
+        left: 0
+        top: 4px
+
+//rigister end
+//dashboard start 
+.wrapper
+    display: flex
+    position: relative
+    &.open
+        overflow: hidden
+.siderbar
+    background-color: #fff
+    max-width: 298px
+    overflow-y: scroll
+    overflow-x: hidden
+    height: 100vh
+    width: 100%
+    &::-webkit-scrollbar
+        width: 0
+
+    &-head
+        padding: 20px 15px 20px 25px
+        background-color: rgba(#80ABFF,0.1)
+    &-box
+        justify-content: space-between
+        width: 100%
+    &-wrapper
+        padding: 20px 16px
+        width: 298px
+.profile
+    &-img
+        border-radius: 12px
+        overflow: hidden
+        margin-right: 20px
+    &-title
+        font-weight: 600
+        font-size: 12px
+        line-height: 16px
+        color: #000
+    &-text
+        font-size: 10px
+        line-height: 14px
+        color: rgba(#000,0.5)
+    &-nav-link
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        width: 30px
+        height: 30px
+        transition: all .3s
+
+.edit-link
+    margin-right: 18px
+    background-color: rgba(#605BFF,0.1)
+    transition: all .3s
+    &:hover
+        background-color: rgba(#605BFF,0.3)
+
+.exit-link:hover svg g
+    opacity: 1
+    path
+        fill: #605BFF
+        transition: all .3s
+.tabs-head
+    justify-content: space-between
+    background: rgba(#FF8F6B, 0.05)
+    border-radius: 10px
+    padding: 5px
+    margin-bottom: 23px
+.filter-tab
+    color: rgba(#030229, 0.7)
+    cursor: pointer
+    padding: 6px 17px
+    border-radius: 10px
+    transition: all .3s
+    &.active,
+    &:hover
+        background: #FF8F6B
+        color: #FFFFFF
+.tab-current
+    background: #FF8F6B
+    color: #FFFFFF
+.tab-item
+    display: none
+    &.active-tab
+        display: block
+
+.inner
+    width: 100%
+    padding: 30px 30px 59px 25px
+    &-head
+        justify-content: space-between
+        width: 100%
+        margin-bottom: 36px
+    &-title
+        font-weight: 700
+        font-size: 24px
+        line-height: 33px
+    &-links
+        position: relative
+        margin-left: 30px
+        &::before
+            position: absolute
+            content: ""
+            bottom: 0
+            left: 0
+            height: 1px
+            width: 100%
+            border-radius: 10px
+            background-color: rgba(#030229, 0.05)
+    &-link
+        color: rgba(#000, 0.4)
+        position: relative
+        padding: 0 17px 8px
+        font-weight: 400
+        transition: all .3s
+        &::before
+            position: absolute
+            content: ""
+            bottom: 0
+            left: 0
+            width: 0
+            height: 2px
+            border-radius: 10px
+            transition: all .3s
+        &.active
+            color: $primaryColor
+            &::before
+                width: 100%
+                background-color: $primaryColor
+        &:hover
+            color: $primaryColor
+            &::before
+                width: 100%
+                background-color: $primaryColor
+.search
+    background: #FFFFFF
+    border-radius: 10px
+    position: relative
+    width: 230px
+    padding-right: 20px
+    transition: all .3s
+    &:focus-within,
+    &:hover
+        box-shadow: 0px 0px 5px rgba($primaryColor, 0.7)
+    &-input
+        width: 100%
+        border-radius: 10px
+        font-size: 12px
+        line-height: 16px
+        padding: 13px 7px 11px 20px
+        background-color: #fff
+        &::placeholder
+            font-size: 12px
+            line-height: 16px
+.add-btn
+    margin-left: 20px
+    border-radius: 10px
+    padding: 11px 20px
+    color: #fff
+    span
+        margin-left: 15px
+
+.filter-radio
+    background: #FFFFFF
+    border-radius: 10px
+    overflow: hidden
+    margin-right: 16px
+.radio-wrap
+    padding: 13px 0 12px
+.radio
+    position: absolute
+    z-index: -1
+    opacity: 0
+
+.radio:checked + .radio-label
+    background-color: $primaryColor
+    color: #fff
+
+.radio-label
+
+    background-color: #fff
+    transition: all .3s
+    color: rgba(#030229, 0.7)
+    cursor: pointer
+    &:hover
+        color: $primaryColor
+.radio-nav
+    padding: 13px 19px 12px 20px
+.circle-btn
+    background-color: $primaryColor
+    justify-content: center
+    width: 24px
+    height: 24px
+    border-radius: 50%
+
+.filter-label
+    flex-direction: row-reverse
+    justify-content: space-between
+    &::before
+        margin-right: 0
+        margin-left: 13px
+.label_long
+    min-width: 160px
+.label_short
+    min-width: 125px
+.checkbox-box:not(:last-child)
+    margin-bottom: 3px
+.label
+    color: rgba(#030229 , 0.7)
+    margin-bottom: 5px
+.form-heading
+    padding-left: 5px
+
+.filter-title
+    margin-bottom: 20px
+
+.form-box-cols
+    display: flex
+    justify-content: space-between
+.form-box
+    margin-bottom: 32px
+    &:focus-within .label
+        color: $primaryColor
+.form-box-right
+    max-width: 147px
+    width: 100%
+    .filter-label
+        width: 100%
+.form-box-left
+    max-width: 186px
+    width: 100%
+    .filter-label
+        width: 100%
+.input
+    background-color: #F7F7F8
+    border-radius: 10px
+    padding: 7px 8px 7px 20px
+    width: 100%
+    transition: all .3s
+    &::placeholder
+        color: rbga(#030229, 0.2)
+    &:focus,
+    &:hover
+        box-shadow: 0px 0px 5px rgba($primaryColor, 0.7)
+.input_small
+    width: 122px
+    &:first-child
+        margin-right: 22px
+.textarea
+    resize: none
+    outline: none
+    min-height: 100px
+    margin-top: 20px
+.sidebar-btn
+    display: block
+    padding: 11px 36px
+    margin: 32px auto 0
+.inner-items
+    margin-top: 37px
+.item
+    background-color: #fff
+    border-radius: 10px
+    padding: 23px 32px 25px 23px
+    display: flex
+    &:not(:last-child)
+        margin-bottom: 18px
+
+    &-img
+        width: 128px
+        height: 128px
+        margin-right: 27px
+        border-radius: 12px
+        overflow: hidden
+    &-content
+        width: 100%
+    &-top
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        margin-bottom: 25px
+    &-info
+        display: block
+        font-weight: 600
+        &:not(:last-child)
+            margin-bottom: 13px
+    &-label
+        font-weight: 300
+    &-box
+        margin-right: 90px
+    &-date
+        width: 268px
+    &-row
+        justify-content: space-between
+        &:not(:last-child)
+            margin-bottom: 13px
+    &-adress
+        position: relative
+        padding-left: 22px
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            width: 15px
+            height: 15px
+            border-radius: 5px
+    &-street::before
+        background-color: #5B93FF
+    &-district::before
+        background-color: #FFD66B
+    &-col
+        display: flex
+    &-link
+        margin-left: 9px
+.info-banner
+    display: inline-block
+    padding: 13px 30px
+    background: rgba(#3A974C, 0.1)
+    border-radius: 22.5px
+    color: #3A974C
+    font-weight: 700
+
+.date
+    position: relative
+    padding-left: 23px
+    &::before
+        content: ""
+        position: absolute
+        left: 0
+        top: 2px
+        width: 14px
+        height: 14px
+        background-image: url(../images/icons/calendar.svg)
+        background-size: contain
+
+.options
+    position: relative
+    margin-left: 20px
+.options-btn
+    cursor: pointer
+    &.open svg path
+        fill: $primaryColor
+    &:hover svg path
+        fill: $primaryColor
+        transition: all .3s
+.options-wrapper
+    position: absolute
+    right: -22px
+    width: 121px
+    padding: 10px 11px
+    background: #FFFFFF
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    opacity: 0
+    z-index: -1
+.options-btn.open ~ .options-wrapper
+    opacity: 1
+    z-index: 1
+.option-btn
+    padding: 7px 7px 10px 9px
+    font-size: 10px
+    line-height: 14px
+    border-radius: 5px
+    width: 100%
+    transition: all .3s
+    svg
+        margin-right: 5px
+.option-edit
+    background: rgba(#5B93FF, 0.05)
+    margin-bottom: 5px
+    color: #5B93FF
+    &:hover
+        background: rgba(#5B93FF, 0.2)
+.option-delet
+    background: rgba(#E71D36, 0.05)
+    color: #E71D36
+    &:hover
+        background: rgba(#E71D36, 0.15)
+.price
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    color: #000
+
+//dashboard end 
+.jq-selectbox
+    width: 100%
+.jq-selectbox__select
+    height: 32px
+    padding: 6px 45px 0 10px
+    background: #F7F7F8
+    border-radius: 5px
+    font: inherit
+.jq-selectbox__select-text
+    overflow: visible
+.jq-selectbox__trigger-arrow
+    position: absolute
+    top: 14px
+    right: 12px
+    width: 6px
+    height: 5px
+    background-image: url(../images/icons/select-arrow.svg)
+    background-size: cover
+.jq-selectbox__dropdown
+    background: #F7F7F8
+    font: inherit
+    border-radius: 4px
+    width: 100%
+    margin: 2px 0 0
+    overflow: hidden
+.jq-selectbox li.selected
+    background-color: $primaryColor
+    color: #FFF
+.jq-selectbox li
+    min-height: 18px
+    padding: 5px 10px 6px
+.jq-selectbox li:hover
+    background-color: rgba($primaryColor, 0.9)
+    color: #FFF
+//profile start
+.form-info
+    margin-bottom: 32px
+.form-info-title
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+.radio-label_circle
+    padding: 2px 7px
+    border-radius: 12px
+.from-distance
+    justify-content: space-between
+.radio-label_btn
+    padding: 6px 8px 7px 8px
+    border-radius: 6px
+.form-type
+    justify-content: space-between
+//profile end 
+.content-tab
+    display: none
+    animation: fadeIn 0.15s linear
+.current-content-tab
+    display: block
+@keyframes fadeIn
+    0%
+        opacity: 0
+
+    100%
+        opacity: 1
+
+.add-object
+    background-color: #fff
+    border-radius: 10px 0px 0px 10px
+    width: 409px
+    padding: 40px 20px 32px
+    position: absolute
+    top: 0
+    right: -1000px
+    overflow-x: hidden
+    overflow-y: scroll
+    height: 100vh
+    transition: all .3s
+    display: none
+    &::-webkit-scrollbar
+        width: 0
+    &.open
+        right: 0
+        display: block
+        z-index: 12
+    &-tabs
+        margin-bottom: 32px
+    &-btn
+        width: 100%
+        margin-top: 32px
+.add-object-head
+    justify-content: space-between
+    margin-bottom: 32px
+.add-title
+    font-weight: 600
+    font-size: 20px
+    line-height: 27px
+.btn-cllose
+    width: 40px
+    height: 40px
+    background-color: rgba(#E71D36, 0.05)
+    border-radius: 50%
+    transition: all .3s
+    &:hover
+        background-color: rgba(#E71D36, 0.2)
+        svg
+            transition: all .3s
+            transform: rotate(180deg)
+.step-one.hide
+    display: none
+.step-two
+    transform: translateX(1000px)
+    transition: all .3s
+    display: none
+    &.open
+        display: block
+        transform: translateX(0px)
+.add-img
+    border-radius: 50%
+    width: 134px
+    height: 134px
+    background-color: #F7F7F8
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto 40px
+.item-card-cols
+    display: flex
+    margin-bottom: 32px
+.item-card-images
+    display: flex
+.card-images
+    display: flex
+.card-img_large
+    width: 300px
+    height: 300px
+    border-radius: 12px
+    overflow: hidden
+.card-tumbs
+    display: flex
+    flex-direction: column
+    margin-left: 16px
+    margin-right: 64px
+.card-tumb
+    &:not(:last-child)
+        margin-bottom: 5px
+.card-tumb-img
+    width: 51px
+    height: 52px
+    border-radius: 12px
+    overflow: hidden
+.item-card
+    &-head
+        display: flex
+        max-width: 366px
+        width: 100%
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 20px
+    &-heading
+        font-size: 18px
+        line-height: 25px
+    &-text
+        margin-bottom: 20px
+    &-row
+        display: flex
+        align-items: center
+        margin-bottom: 16px
+    &-box:first-child
+        margin-right: 32px
+    &-label
+        color: #000000
+        margin-right: 8px
+    &-content
+        font-weight: 600
+.item-card-inner
+    display: flex
+    margin-top: 20px
+    max-width: 354px
+    width: 100%
+.card-checkbox
+    width: 100%
+.card-text
+    margin-top: 16px
+    font-weight: 300
+.item-card-right
+    margin-left: 86px
+.item-card-bottom
+    max-width: 771px
+    width: 100%
+.item-card-bottom__content
+    display: flex
+//menu-btn
+.menu-btn
+    display: none
+    width: 20px
+    height: 14px
+    position: relative
+    transform: rotate(0deg)
+    transition: .5s ease-in-out
+    cursor: pointer
+
+.menu-btn span
+    display: block
+    position: absolute
+    height: 2px
+    width: 100%
+    background: $primaryColor
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+.menu-btn span:nth-child(1)
+    top: 0px
+
+.menu-btn span:nth-child(2),.menu-btn span:nth-child(3)
+    top: 6px
+
+.menu-btn span:nth-child(4)
+    top: 12px
+
+.menu-btn.open span:nth-child(1)
+    top: 10px
+    width: 0%
+    left: 50%
+
+.menu-btn.open span:nth-child(2)
+    transform: rotate(45deg)
+
+.menu-btn.open span:nth-child(3)
+    transform: rotate(-45deg)
+
+.menu-btn.open span:nth-child(4)
+    top: 18px
+    width: 0%
+    left: 50%
+
+//menu-btn
+.map
+    margin-top: 32px
+    width: 100%
+    img
+        width: 100%
+        height: 100%
+@import media

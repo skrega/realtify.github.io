@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@2.0.2/dist/jquery.formstyler.css">
+    <link rel="stylesheet" href="css//normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="siderbar">
+            <div class="siderbar-head flex-center">
+                <img src="images/profile-photo.jpg" class="profile-img" alt="user">
+                <div class="siderbar-box flex-center">
+                    <div class="profile-info">
+                        <div class="profile-title">Иванов И. И.</div>
+                        <div class="profile-text">АГ Доминиан</div>
+                        <div class="profile-text">Вятская 55</div>
+                    </div>
+                    <div class="profile-nav flex-center">
+                        <a href="#" class="edit-link profile-nav-link flex-center">
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                    fill="#605BFF" />
+                            </svg>
+                        </a>
+                        <a href="login.html" class="exit-link profile-nav-link flex-center">
+                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.4">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M6.57946 7.69167C6.21487 7.69167 5.9266 7.975 5.9266 8.33333C5.9266 8.68333 6.21487 8.975 6.57946 8.975H11.6667V12.9583C11.6667 15 9.97941 16.6667 7.89365 16.6667H3.76453C1.68726 16.6667 0 15.0083 0 12.9667V3.70833C0 1.65833 1.69574 0 3.77301 0H7.91061C9.97941 0 11.6667 1.65833 11.6667 3.7V7.69167H6.57946ZM14.6919 5.45017L17.1252 7.87517C17.2502 8.00017 17.3169 8.1585 17.3169 8.3335C17.3169 8.50017 17.2502 8.66684 17.1252 8.7835L14.6919 11.2085C14.5669 11.3335 14.4002 11.4002 14.2419 11.4002C14.0752 11.4002 13.9085 11.3335 13.7835 11.2085C13.5335 10.9585 13.5335 10.5502 13.7835 10.3002L15.1169 8.97517H11.6669V7.69184H15.1169L13.7835 6.36684C13.5335 6.11684 13.5335 5.7085 13.7835 5.45851C14.0335 5.20017 14.4419 5.20017 14.6919 5.45017Z"
+                                        fill="#030229" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="siderbar-wrapper">
+                <div class="filter-tabs">
+                    <div class="tabs-head tabs flex-center">
+                        <span class="filter-tab tab text active" data-id="1">Квартира</span>
+                        <span class="filter-tab tab text" data-id="2">Дом</span>
+                        <span class="filter-tab tab text" data-id="3">Участок</span>
+                    </div>
+                    <div class="tab_content">
+                        <div class="tab-item active-tab" id="1">
+                            <div class="form-box">
+                                <div class="filter-title label text">Район</div>
+                                <select id="" class="select text_color">
+                                    <option value="">Район 1</option>
+                                    <option value="">Район 2</option>
+                                    <option value="">Район 3</option>
+                                </select>
+                            </div>
+                            <div class="form-box">
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="newBuildings" class="checkbox">
+                                    <label for="newBuildings"
+                                        class="label-checkbox filter-label label_long">Новостройки</label>
+                                </div>
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="resale" class="checkbox">
+                                    <label for="resale" class="label-checkbox filter-label label_long">Вторичка</label>
+                                </div>
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="stroyvariant" class="checkbox">
+                                    <label for="stroyvariant"
+                                        class="label-checkbox filter-label label_long">Стройвариант</label>
+                                </div>
+                            </div>
+                            <div class="filter-title label text">Количество комнат</div>
+                            <div class="form-box form-box-cols">
+                                <div class="form-box-col">
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="studio" class="checkbox">
+                                        <label for="studio"
+                                            class="label-checkbox filter-label label_short">Студия</label>
+                                    </div>
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="freePlan" class="checkbox">
+                                        <label for="freePlan" class="label-checkbox filter-label label_short">Своб.
+                                            план</label>
+                                    </div>
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="oneRoom" class="checkbox">
+                                        <label for="oneRoom" class="label-checkbox filter-label label_short">1
+                                            ком</label>
+                                    </div>
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="twoRoom" class="checkbox">
+                                        <label for="twoRoom" class="label-checkbox filter-label label_short">2
+                                            ком</label>
+                                    </div>
+                                </div>
+                                <div class="form-box-col">
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="threeRoom" class="checkbox">
+                                        <label for="threeRoom" class="label-checkbox filter-label label_short">3
+                                            ком</label>
+                                    </div>
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="fourRoom" class="checkbox">
+                                        <label for="fourRoom" class="label-checkbox filter-label label_short">4
+                                            ком</label>
+                                    </div>
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="fiveRoom" class="checkbox">
+                                        <label for="fiveRoom" class="label-checkbox filter-label label_short">5
+                                            ком</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="filter-title label">Общая площадь</div>
+                            <div class="form-box flex-center">
+                                <input type="text" class="input_small input" placeholder="От">
+                                <input type="text" class="input_small input" placeholder="До">
+                            </div>
+                            <div class="filter-title label">Жилая площадь</div>
+                            <div class="form-box flex-center">
+                                <input type="text" class="input_small input" placeholder="От">
+                                <input type="text" class="input_small input" placeholder="До">
+                            </div>
+                            <div class="filter-title label">Площадь кухни</div>
+                            <div class="form-box flex-center">
+                                <input type="text" class="input_small input" placeholder="От">
+                                <input type="text" class="input_small input" placeholder="До">
+                            </div>
+                            <div class="filter-title label">Этаж</div>
+                            <div class="form-box flex-center">
+                                <input type="text" class="input_small input" placeholder="От">
+                                <input type="text" class="input_small input" placeholder="До">
+                            </div>
+                            <div class="form-box form-box-cols">
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="notFirst" class="checkbox">
+                                    <label for="notFirst" class="label-checkbox filter-label label_short">Не
+                                        первый</label>
+                                </div>
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="notLast" class="checkbox">
+                                    <label for="notLast" class="label-checkbox filter-label label_short">Не
+                                        последний</label>
+                                </div>
+                            </div>
+                            <div class="filter-title label">Этажей в доме</div>
+                            <div class="form-box flex-center">
+                                <input type="text" class="input_small input" placeholder="От">
+                                <input type="text" class="input_small input" placeholder="До">
+                            </div>
+                            <div class="filter-title label">Тип дома</div>
+                            <div class="form-box form-box-cols">
+                                <div class="form-box-col">
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="brick" class="checkbox">
+                                        <label for="brick"
+                                            class="label-checkbox filter-label label_short">Кирпичный</label>
+                                    </div>
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="panel" class="checkbox">
+                                        <label for="panel"
+                                            class="label-checkbox filter-label label_short">Панельный</label>
+                                    </div>
+                                </div>
+                                <div class="form-box-col">
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="blocky" class="checkbox">
+                                        <label for="blocky"
+                                            class="label-checkbox filter-label label_short">Блочный</label>
+                                    </div>
+                                    <div class="checkbox-box">
+                                        <input type="checkbox" id="monolithic" class="checkbox">
+                                        <label for="monolithic"
+                                            class="label-checkbox filter-label label_short">Монолитный</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter-title label">Цена</div>
+                            <div class="form-box flex-center">
+                                <input type="text" class="input_small input" placeholder="От">
+                                <input type="text" class="input_small input" placeholder="До">
+                            </div>
+                            <input id="isMortgage" type="checkbox" class="form-checkbox checkbox">
+                            <label for="isMortgage" class="text label-checkbox">Подходит под ипотеку</label>
+                            <button class="btn-primary btn sidebar-btn" type="submit">
+                                Показать
+                            </button>
+                        </div>
+                        <div class="tab-item" id="2">
+                            <div class="form-box">
+                                <div class="form-heading label text">Район</div>
+                                <select id="" class="select text_color">
+                                    <option value="">Район 1</option>
+                                    <option value="">Район 2</option>
+                                    <option value="">Район 3</option>
+                                </select>
+                            </div>
+                            <div class="form-box from-distance flex-center">
+                                <span class="text text_color">До</span>
+                                <div class="radio-box">
+                                    <input type="radio" id="15" class="radio-circle radio" name="distance" checked>
+                                    <label for="15" class="radio-label radio-label_circle text">15</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="30" class="radio-circle radio" name="distance">
+                                    <label for="30" class="radio-label radio-label_circle text">30</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="50" class="radio-circle radio" name="distance">
+                                    <label for="50" class="radio-label radio-label_circle text">50</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="100" class="radio-circle radio" name="distance">
+                                    <label for="100" class="radio-label radio-label_circle text">100</label>
+                                </div>
+                                <span class="text text_color">км</span>
+                            </div>
+                            <div class="form-box flex-center form-type">
+                                <div class="radio-box">
+                                    <input type="radio" id="house" class="radio-btn radio" name="typeHouse" checked>
+                                    <label for="house" class="radio-label radio-label_btn text">Дом</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="countryHouse" class="radio-btn radio" name="typeHouse">
+                                    <label for="countryHouse" class="radio-label radio-label_btn text">Дача</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="cottage" class="radio-btn radio" name="typeHouse">
+                                    <label for="cottage" class="radio-label radio-label_btn text">Коттедж</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="townhouse" class="radio-btn radio" name="typeHouse">
+                                    <label for="townhouse" class="radio-label radio-label_btn text">Таунхаус</label>
+                                </div>
+                            </div>
+
+                            <div class="form-box">
+                                <div class="filter-title label">Этажей в доме</div>
+                                <div class="input-box flex-center">
+                                    <input type="text" class="input_small input" placeholder="От">
+                                    <input type="text" class="input_small input" placeholder="До">
+                                </div>
+                            </div>
+                            <div class="form-box">
+                                <div class="form-heading label text">Материал стен</div>
+                                <select id="" class="select text_color">
+                                    <option value="">Материал стен 1</option>
+                                    <option value="">Материал стен 2</option>
+                                    <option value="">Материал стен 3</option>
+                                </select>
+                            </div>
+                            <div class="form-box">
+                                <div class="filter-title label">Площадь дома</div>
+                                <div class="input-box flex-center">
+                                    <input type="text" class="input_small input" placeholder="От">
+                                    <input type="text" class="input_small input" placeholder="До">
+                                </div>
+                            </div>
+                            <div class="form-box">
+                                <div class="filter-title label">Площадь участка</div>
+                                <div class="input-box flex-center">
+                                    <input type="text" class="input_small input" placeholder="От">
+                                    <input type="text" class="input_small input" placeholder="До">
+                                </div>
+                            </div>
+                            <div class="form-box">
+                                <div class="filter-title label">Цена</div>
+                                <div class="input-box flex-center">
+                                    <input type="text" class="input_small input" placeholder="От">
+                                    <input type="text" class="input_small input" placeholder="До">
+                                </div>
+                            </div>
+                            <input id="houseIsMortgage" type="checkbox" class="form-checkbox checkbox">
+                            <label for="houseIsMortgage" class="text label-checkbox">Подходит под ипотеку</label>
+                            <button class="btn-primary btn sidebar-btn" type="submit">
+                                Показать
+                            </button>
+                        </div>
+                        <div class="tab-item" id="3">
+                            <div class="form-box">
+                                <div class="form-heading label text">Район</div>
+                                <select id="" class="select text_color">
+                                    <option value="">Район 1</option>
+                                    <option value="">Район 2</option>
+                                    <option value="">Район 3</option>
+                                </select>
+                            </div>
+                            <div class="form-box from-distance flex-center">
+                                <span class="text text_color">До</span>
+                                <div class="radio-box">
+                                    <input type="radio" id="homestead15" class="radio-circle radio" name="distance"
+                                        checked>
+                                    <label for="homestead15" class="radio-label radio-label_circle text">15</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="homestead30" class="radio-circle radio" name="distance">
+                                    <label for="homestead30" class="radio-label radio-label_circle text">30</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="homestead50" class="radio-circle radio" name="distance">
+                                    <label for="homestead50" class="radio-label radio-label_circle text">50</label>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" id="homestead100" class="radio-circle radio" name="distance">
+                                    <label for="homestead100" class="radio-label radio-label_circle text">100</label>
+                                </div>
+                                <span class="text text_color">км</span>
+                            </div>
+                            <div class="form-box">
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="settlement" class="checkbox">
+                                    <label for="settlement" class="label-checkbox filter-label label_long">Поселение
+                                        ИЖС</label>
+                                </div>
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="agricultural" class="checkbox">
+                                    <label for="agricultural" class="label-checkbox filter-label label_long">Сельхоз
+                                        СНТ,
+                                        ДНП</label>
+                                </div>
+                                <div class="checkbox-box">
+                                    <input type="checkbox" id="industrialDestination" class="checkbox">
+                                    <label for="industrialDestination"
+                                        class="label-checkbox filter-label label_long">Промназначения</label>
+                                </div>
+                            </div>
+                            <div class="form-box">
+                                <div class="filter-title label">Цена</div>
+                                <div class="input-box flex-center">
+                                    <input type="text" class="input_small input" placeholder="От">
+                                    <input type="text" class="input_small input" placeholder="До">
+                                </div>
+                            </div>
+                            <button class="btn-primary btn sidebar-btn" type="submit">
+                                Показать
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="inner">
+            <div class="inner-head flex-center">
+                <div class="inner-col flex-center">
+                    <div class="inner-box flex-center">
+                        <div class="menu-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="inner-title">
+                            Объекты
+                        </div>
+                    </div>
+
+                    <div class="inner-links flex-center">
+                        <a href="index.html" class="inner-link main-text active">Моя база</a>
+                        <a href="profile.html" class="inner-link main-text">Общая база</a>
+                    </div>
+                </div>
+                <div class="inner-col flex-center">
+                    <form class="search flex-center">
+                        <input type="text" class="search-input" placeholder="Поиск">
+                        <button class="search-btn" type="submit">
+                            <img src="images/icons/search.svg" alt="">
+                        </button>
+                    </form>
+                    <button class="add-btn main-text btn-primary flex-center">
+                        <img src="images/icons/plus.svg" alt="">
+                        <span>Добавить объект</span>
+                    </button>
+                </div>
+            </div>
+            <div class="filter-inner flex-center">
+                <div class="filter-radio flex-center">
+                    <div class="radio-wrap">
+                        <input type="radio" checked id="all" class="radio" name="object-filter">
+                        <label for="all" class="radio-label radio-nav">Все</label>
+                    </div>
+                    <div class="radio-wrap">
+                        <input type="radio" id="important" class="radio" name="object-filter">
+                        <label for="important" class="radio-label radio-nav">Важные</label>
+                    </div>
+                    <div class="radio-wrap">
+                        <input type="radio" id="draft" class="radio" name="object-filter">
+                        <label for="draft" class="radio-label radio-nav">Черновик</label>
+                    </div>
+                </div>
+
+                <button class="circle-btn flex-center">
+                    <img src="images/icons/plus.svg" alt="">
+                </button>
+            </div>
+            <div class="inner-items">
+                <div class="item">
+                    <a href="card.html">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text_hover text">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info text_hover item-adress item-street text">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info text_hover item-adress item-district text">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="card.html">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text text_hover">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info item-adress item-street text text_hover">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info item-adress item-district text text_hover">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="card.html">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text text_hover">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info item-adress item-street text text_hover">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info item-adress item-district text text_hover">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text_hover text">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info text_hover item-adress item-street text">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info text_hover item-adress item-district text">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text text_hover">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info item-adress item-street text text_hover">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info item-adress item-district text text_hover">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text text_hover">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info item-adress item-street text text_hover">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info item-adress item-district text text_hover">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text_hover text">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info text_hover item-adress item-street text">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info text_hover item-adress item-district text">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text text_hover">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info item-adress item-street text text_hover">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info item-adress item-district text text_hover">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="#">
+                        <img src="images/item-img.jpg" alt="" class="item-img">
+                    </a>
+                    <div class="item-content">
+                        <div class="item-top">
+                            <div class="item-col">
+                                <div class="item-box">
+                                    <a href="#" class="item-info text text_hover">3-к кв. 60 кв.м. 3/5 эт</a>
+                                    <a href="#" class="item-info item-adress item-street text text_hover">Таганрогская,
+                                        159</a>
+                                    <a href="#" class="item-info item-adress item-district text text_hover">Октябрьский
+                                        район</a>
+                                </div>
+                                <div class="item-date">
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Опубликовано</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                    <div class="item-row flex-center">
+                                        <div class="item-label">Последняя проверка</div>
+                                        <div class="item-info date">10 Дек, 2020</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-block flex-center">
+                                <div class="info-banner text">
+                                    Без категории
+                                </div>
+                                <div class="options">
+                                    <div class="options-btn">
+                                        <svg width="19" height="5" viewBox="0 0 19 5" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.3043 0.732238C17.3768 -0.244069 15.8731 -0.244069 14.9456 0.732238C14.0181 1.70855 14.0181 3.29146 14.9456 4.26777C15.8731 5.24408 17.3768 5.24408 18.3043 4.26777C19.2318 3.2915 19.2318 1.70858 18.3043 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M11.1793 0.732238C10.2518 -0.244069 8.74806 -0.244069 7.82057 0.732238C6.89308 1.70855 6.89308 3.29146 7.82057 4.26777C8.74806 5.24408 10.2518 5.24408 11.1793 4.26777C12.1068 3.2915 12.1068 1.70858 11.1793 0.732238Z"
+                                                fill="#B3B3BF" />
+                                            <path
+                                                d="M4.05438 0.732238C3.12689 -0.244069 1.62312 -0.244069 0.695633 0.732238C-0.231857 1.70855 -0.231857 3.29146 0.695633 4.26777C1.62312 5.24408 3.12689 5.24408 4.05438 4.26777C4.98187 3.2915 4.98187 1.70858 4.05438 0.732238Z"
+                                                fill="#B3B3BF" />
+                                        </svg>
+                                    </div>
+
+                                    <div class="options-wrapper">
+                                        <button class="option-btn option-edit flex-center">
+                                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M2.83395 7.56796L6.73901 2.51797C6.95125 2.24565 7.02671 1.9308 6.95596 1.61022C6.89465 1.31878 6.71543 1.04168 6.44661 0.83146L5.79105 0.310695C5.22038 -0.143182 4.51294 -0.0954059 4.10734 0.425359L3.66873 0.994378C3.61214 1.06556 3.62629 1.17067 3.69703 1.22801C3.69703 1.22801 4.80535 2.11665 4.82893 2.13576C4.90439 2.20742 4.96099 2.30298 4.97513 2.41764C4.99872 2.64219 4.84308 2.85241 4.61198 2.88107C4.50351 2.89541 4.39975 2.86196 4.32429 2.79985L3.15938 1.87299C3.10278 1.83047 3.01789 1.83955 2.97073 1.89688L0.202284 5.48012C0.023066 5.70467 -0.0382454 5.99611 0.023066 6.27799L0.376785 7.81162C0.39565 7.89284 0.466394 7.95017 0.551287 7.95017L2.10765 7.93106C2.39063 7.92628 2.65474 7.79728 2.83395 7.56796ZM5.01328 7.09027H7.5511C7.7987 7.09027 8.00008 7.29428 8.00008 7.5451C8.00008 7.79641 7.7987 7.99994 7.5511 7.99994H5.01328C4.76567 7.99994 4.56429 7.79641 4.56429 7.5451C4.56429 7.29428 4.76567 7.09027 5.01328 7.09027Z"
+                                                    fill="#5B93FF" />
+                                            </svg> Редактировать
+                                        </button>
+                                        <button class="option-btn option-delet flex-center">
+                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.45297 2.18473C8.61506 2.18473 8.75 2.31931 8.75 2.49056V2.64889C8.75 2.81598 8.61506 2.95472 8.45297 2.95472H1.54744C1.38494 2.95472 1.25 2.81598 1.25 2.64889V2.49056C1.25 2.31931 1.38494 2.18473 1.54744 2.18473H2.76232C3.0091 2.18473 3.22388 2.00932 3.27939 1.76182L3.34301 1.47766C3.44189 1.09058 3.76729 0.833496 4.1397 0.833496H5.8603C6.22866 0.833496 6.5577 1.09058 6.65293 1.45724L6.72101 1.7614C6.77612 2.00932 6.9909 2.18473 7.23809 2.18473H8.45297ZM7.83576 7.97267C7.9626 6.7906 8.18466 3.98229 8.18466 3.95396C8.19277 3.86813 8.16481 3.78688 8.10929 3.72146C8.04972 3.66021 7.97435 3.62396 7.89128 3.62396H2.11189C2.02841 3.62396 1.94898 3.66021 1.89387 3.72146C1.83795 3.78688 1.81039 3.86813 1.81445 3.95396C1.81519 3.95916 1.82316 4.05808 1.83648 4.22346C1.89566 4.95815 2.06049 7.00439 2.167 7.97267C2.24237 8.68599 2.71041 9.13432 3.38836 9.15057C3.91151 9.16265 4.45047 9.16682 5.00158 9.16682C5.52068 9.16682 6.04789 9.16265 6.58725 9.15057C7.2887 9.13849 7.75634 8.69808 7.83576 7.97267Z"
+                                                    fill="#E71D36" />
+                                            </svg>
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-row flex-center">
+                            <div class="item-col flex-center">
+                                <div class="item-label">Продавец:</div>
+                                <div class="item-info">
+                                    <a href="tel:8 (999) 123-45-67" class="item-link text_hover">8 (999) 123-45-67</a>
+                                    Петров И.И.
+                                </div>
+                            </div>
+                            <div class="item-price price">
+                                5 200 000
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-object">
+                <div class="add-object-head flex-center">
+                    <div class="add-title">
+                        Добавить объект
+                    </div>
+                    <button class="btn-cllose">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.8"
+                                d="M5.91615 4.99993L9.80995 8.89392C10.0634 9.14721 10.0634 9.55675 9.80995 9.81003C9.55667 10.0633 9.14714 10.0633 8.89386 9.81003L4.99994 5.91604L1.10614 9.81003C0.85274 10.0633 0.443335 10.0633 0.190051 9.81003C-0.0633505 9.55675 -0.0633505 9.14721 0.190051 8.89392L4.08385 4.99993L0.190051 1.10593C-0.0633505 0.852639 -0.0633505 0.443107 0.190051 0.189818C0.316278 0.0634708 0.482246 0 0.648097 0C0.813947 0 0.979797 0.0634708 1.10614 0.189818L4.99994 4.08382L8.89386 0.189818C9.0202 0.0634708 9.18605 0 9.3519 0C9.51775 0 9.6836 0.0634708 9.80995 0.189818C10.0634 0.443107 10.0634 0.852639 9.80995 1.10593L5.91615 4.99993Z"
+                                fill="#E71D36" />
+                        </svg>
+                    </button>
+                </div>
+                <form action="">
+                    <div class="step-one">
+                        <div class="add-object-tabs ">
+                            <div class="nav-tab tabs-head flex-center">
+                                <span class="tab-object filter-tab text active-tab-object"
+                                    data-tab="tab-1">Квартира</span>
+                                <span class="tab-object filter-tab text" data-tab="tab-2">Дом</span>
+                                <span class="tab-object filter-tab text" data-tab="tab-3">Участок</span>
+                            </div>
+                            <div class="content-tab filter-tab-item active-object" id="tab-1">
+                                <div class="form-box flex-center form-type">
+                                    <div class="radio-box">
+                                        <input type="radio" id="objNewBuilding" class="radio-btn radio" name="objType"
+                                            checked>
+                                        <label for="objNewBuilding"
+                                            class="radio-label radio-label_btn text">Новостройка</label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <input type="radio" id="objResale" class="radio-btn radio" name="objType">
+                                        <label for="objResale" class="radio-label radio-label_btn text">Вторичка</label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <input type="radio" id="objFlat" class="radio-btn radio" name="objType">
+                                        <label for="objFlat" class="radio-label radio-label_btn text">Квартира</label>
+                                    </div>
+                                    <div class="radio-box">
+                                        <input type="radio" id="objApartments" class="radio-btn radio" name="objType">
+                                        <label for="objApartments"
+                                            class="radio-label radio-label_btn text">Апартаменты</label>
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="filter-title label text">Тип дома</div>
+                                    <select id="" class="select text_color">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="form-box">
+                                    <div class="filter-title label">Этаж</div>
+                                    <div class="input-box flex-center">
+                                        <input type="text" class="input" placeholder="От">
+                                        <input type="text" class="input" placeholder="До">
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="filter-title label">Этажей в доме</div>
+                                    <div class="input-box flex-center">
+                                        <input type="text" class="input" placeholder="От">
+                                        <input type="text" class="input" placeholder="До">
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="filter-title label">Количество комнат</div>
+                                    <div class="input-box flex-center">
+                                        <input type="text" class="input" placeholder="От">
+                                        <input type="text" class="input" placeholder="До">
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="filter-title label">Общая площадь</div>
+                                    <div class="input-box flex-center">
+                                        <input type="text" class="input" placeholder="От">
+                                        <input type="text" class="input" placeholder="До">
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="filter-title label">Жилая площадь</div>
+                                    <div class="input-box flex-center">
+                                        <input type="text" class="input" placeholder="От">
+                                        <input type="text" class="input" placeholder="До">
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="filter-title label">Площадь кухни</div>
+                                    <div class="input-box flex-center">
+                                        <input type="text" class="input" placeholder="От">
+                                        <input type="text" class="input" placeholder="До">
+                                    </div>
+                                </div>
+                                <div class="form-box">
+                                    <div class="filter-title label text">Балкон</div>
+                                    <select id="" class="select text_color">
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="form-box form-box-cols">
+                                    <div class="form-box-col form-box-right">
+                                        <div class="filter-title label">Тип комнат</div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="studio" class="checkbox">
+                                            <label for="studio" class="label-checkbox filter-label">Смежные</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="freePlan" class="checkbox">
+                                            <label for="freePlan"
+                                                class="label-checkbox filter-label">Изолированные</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-box-col form-box-left">
+                                        <div class="filter-title label">Парковка</div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="threeRoom" class="checkbox">
+                                            <label for="threeRoom" class="label-checkbox filter-label">Подземная</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="fourRoom" class="checkbox">
+                                            <label for="fourRoom" class="label-checkbox filter-label">Во
+                                                дворе</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="fiveRoom" class="checkbox">
+                                            <label for="fiveRoom"
+                                                class="label-checkbox filter-label">Многоуровневая</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="fiveRoom" class="checkbox">
+                                            <label for="fiveRoom" class="label-checkbox filter-label">За
+                                                шлагбаумом</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter-title label">Удобства</div>
+                                <div class="form-box form-box-cols">
+                                    <div class="form-box-col form-box-right">
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="studio" class="checkbox">
+                                            <label for="studio" class="label-checkbox filter-label">Консьерж</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="freePlan" class="checkbox">
+                                            <label for="freePlan"
+                                                class="label-checkbox filter-label">Мусоропровод</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="freePlan" class="checkbox">
+                                            <label for="freePlan"
+                                                class="label-checkbox filter-label">Газоснабжение</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="freePlan" class="checkbox">
+                                            <label for="freePlan" class="label-checkbox filter-label">Мебель</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-box-col form-box-left">
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="threeRoom" class="checkbox">
+                                            <label for="threeRoom" class="label-checkbox filter-label">Бытовая
+                                                техника</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="fourRoom" class="checkbox">
+                                            <label for="fourRoom"
+                                                class="label-checkbox filter-label">Кондиционер</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="fiveRoom" class="checkbox">
+                                            <label for="fiveRoom"
+                                                class="label-checkbox filter-label">Гардеробная</label>
+                                        </div>
+                                        <div class="checkbox-box">
+                                            <input type="checkbox" id="fiveRoom" class="checkbox">
+                                            <label for="fiveRoom" class="label-checkbox filter-label">Панорамные
+                                                окна</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-primary add-object-btn next-btn btn">
+                                    Далее
+                                </div>
+                            </div>
+                            <div class="content-tab filter-tab-item" id="tab-2">
+                                2
+                            </div>
+                            <div class="content-tab filter-tab-item" id="tab-3">
+                                3
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="step-two">
+                        <div class="add-img">
+                            <img src="images/icons/img-icon.svg" alt="">
+                        </div>
+                        <div class="form-box">
+                            <div class="form-heading label text">Описание</div>
+                            <textarea class="textarea input" placeholder=""></textarea>
+                        </div>
+                        <div class="form-info">
+                            <div class="form-info-title text_color">Личные отметки</div>
+                            <div class="form-info-text text_color text">
+                                Эти данные видны только вам
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <div class="form-heading label text">Доп. инфоромация</div>
+                            <textarea class="textarea input" placeholder=""></textarea>
+                        </div>
+                        <div class="form-box">
+                            <div class="form-heading label text">Контактное лицо</div>
+                            <input type="text" class="input">
+                        </div>
+                        <div class="form-box">
+                            <div class="form-heading label text">Телефон</div>
+                            <div class="form-info-text text_color text">
+                                Данный номер будет использоваться для подтверждения актуальности объекта
+                            </div>
+                            <input type="text" class="input phone">
+                        </div>
+                        <div class="info-banner text">
+                            Без категории
+                        </div>
+                        <button class="btn-primary add-object-btn btn">
+                            Опубликовать
+                        </button>
+                    </div>
+
+            </div>
+            </form>
+
+            <div class="tab-item" id="5">
+
+            </div>
+            <div class="tab-item" id="6">
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="background"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@2.0.2/dist/jquery.formstyler.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

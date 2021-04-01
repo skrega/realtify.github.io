@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" />
+    <link rel="stylesheet" href="css//normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="enter">
+        <div class="enter-inner login-inner">
+            <form action="" class="form-login form-enter">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Logo">
+                </div>
+                <div class="form-title">Вход</div>
+                <div class="input-box">
+                    <div class="form-label">Email</div>
+                    <input type="text" class="form-input" placeholder="example@gmail.com">
+                </div>
+                <div class="input-box">
+                    <div class="form-label">Пароль</div>
+                    <input type="password" class="form-input" placeholder="">
+                </div>
+                <div class="form-nav flex-center">
+                    <a href="#popup" class="restore-link text link  popup-with-zoom-anim">Восстановить пароль</a>
+                    <div class="remember-wrap">
+                        <input id="remember" type="checkbox" class="form-checkbox sigin-checkbox checkbox">
+                        <label for="remember"
+                            class="text remember-checkbox label-checkbox sigin-label">Запомнить</label>
+                    </div>
+
+                </div>
+                <input type="sumbit" class="form-btn btn btn-primary" value="Войти">
+            </form>
+            <div class="enter-bottom">
+                <div class="enter-bottom-box">
+                    <span class="line"></span>
+                    <div class="enter-title main-text">
+                        Или зарегистрируйтесь
+                    </div>
+                    <span class="line"></span>
+                </div>
+
+                <div class="enter-links flex-center">
+                    <a href="register-agent.html" class="enter-link btn btn-primary">Я агент</a>
+                    <a href="register-agency.html" class="enter-link btn btn-primary">Я агентство</a>
+                </div>
+            </div>
+        </div>
+        <div class="enter-img login-img">
+            <img src="images/login.svg" alt="">
+        </div>
+    </div>
+
+    <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+    <div id="popup" class="popup popup-recover zoom-anim-dialog mfp-hide">
+        <div class="logo">
+            <img src="images/logo.svg" alt="Logo">
+        </div>
+        <div class="form-title">
+            Recover
+        </div>
+        <form action="">
+            <div class="input-box">
+                <div class="form-label">Email Address</div>
+                <input type="text" class="form-input" placeholder="example@gmail.com">
+            </div>
+            <a href="#success" class="form-btn btn btn-primary popup-with-zoom-anim">Reset Your Password</a>
+        </form>
+    </div>
+    <div id="success" class="popup popup-success popup-recover zoom-anim-dialog mfp-hide">
+        <div class="success-img">
+            <img src="images/success.svg" alt=" Logo">
+        </div>
+        <div class="form-title popup-success-title">
+            Your account successfully created.
+        </div>
+        <a href="#" class="form-btn btn btn-primary">Go to Home</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

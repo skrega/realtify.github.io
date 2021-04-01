@@ -1,0 +1,147 @@
+@import vars
+*,
+*::before,
+*::after
+    box-sizing: border-box
+
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Nunito', sans-serif
+    font-size: 14px
+    line-height: 19px
+    color: #030229
+    background-color: #FAFAFA
+    overflow-x: hidden
+
+button, input, optgroup, select, textarea
+    line-height: inherit
+textarea
+    border: none
+h1,
+h2,
+h3,
+h4,
+h5
+    margin: 0
+    padding: 0
+
+p
+    margin: 0
+    padding: 0
+ul
+    margin: 0
+    padding: 0
+li
+    list-style: none
+
+a
+    text-decoration: none
+    color: inherit
+    display: inline-block
+    outline: none
+
+    &:focus
+        outline: none
+select
+    outline: none
+button
+    cursor: pointer
+    outline: none
+    border: none
+    background-color: transparent
+    padding: 0
+    margin: 0
+input
+    border: none
+    outline: none
+    padding: 0
+
+.main-text
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+.text_semibold
+    font-weight: 600
+.text
+    font-size: 14px
+    line-height: 19px
+.text_color
+    color: rgba(#030229 , 0.7)
+.text_hover
+    transition: color .3s
+    &:hover
+        color: $primaryColor
+.link
+    color: $primaryColor
+    transition: all .3s
+    &:hover
+        color: $primaryColor - #111
+        text-decoration: underline
+.flex-center
+    display: flex
+    align-items: center
+
+.btn
+    padding: 14px
+    text-align: center
+    border-radius: 10px
+    color: #fff
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    cursor: pointer
+    transition: all .3s
+.btn-primary
+    background-color: $primaryColor
+    &:hover
+        background-color: $primaryColor -#111
+        box-shadow: 0px 0px 10px rgba($primaryColor, 0.7)
+
+.background
+    position: fixed
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    background-color: rgba(#000, 0.3)
+    opacity: 0
+    z-index: -1
+    &.open
+        opacity: 1
+        z-index: 11
+
+//popup
+.popup
+    background: #fff
+    padding: 20px 30px
+    max-width: 400px
+    margin: 40px auto
+    border-radius: 10px
+    position: relative
+
+.my-mfp-zoom-in .zoom-anim-dialog
+    opacity: 0
+    transition: all 0.2s ease-in-out
+    transform: scale(0.8)
+
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog
+    opacity: 1
+    transform: scale(1)
+
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog
+    transform: scale(0.8)
+    opacity: 0
+
+.my-mfp-zoom-in.mfp-bg
+    opacity: 0
+    transition: opacity 0.3s ease-out
+
+.my-mfp-zoom-in.mfp-ready.mfp-bg
+    opacity: 0.8
+
+.my-mfp-zoom-in.mfp-removing.mfp-bg
+    opacity: 0
+//popup
